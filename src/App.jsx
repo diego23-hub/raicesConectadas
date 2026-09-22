@@ -11,12 +11,14 @@ function App() {
     <>
       <section id="center">
         <div className="hero">
+{/*
           <img src={heroImg} className="base" width="170" height="179" alt="" />
           <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+          <img src={viteLogo} className="vite" alt="Vite logo" /> 
+*/}
         </div>
         <div>
-          <h1>Get started</h1>
+          <h1>Raíces conectadas</h1>
           <p>
             Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
           </p>
@@ -37,7 +39,7 @@ function App() {
           <svg className="icon" role="presentation" aria-hidden="true">
             <use href="/icons.svg#documentation-icon"></use>
           </svg>
-          <h2>Documentation</h2>
+          <h2>Iniciar sesión</h2>
           <p>Your questions, answered</p>
           <ul>
             <li>
@@ -58,8 +60,8 @@ function App() {
           <svg className="icon" role="presentation" aria-hidden="true">
             <use href="/icons.svg#social-icon"></use>
           </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
+          <h2>Conocer destinos</h2>
+          <p>¡Unete a esta grandiosa aventura!</p>
           <ul>
             <li>
               <a href="https://github.com/vitejs/vite" target="_blank">

@@ -1,122 +1,46 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
+
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [vista, setVista] = useState('inicio');
 
   return (
     <>
       <section id="center">
-        <div className="hero">
-{/*
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" /> 
-*/}
-        </div>
-        <div>
-          <h1>Raíces conectadas</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
+        <nav className='navbar'>
+          <div className='logo'> Raíces conectadas</div>
+          <ul className='nav-links'>
+            <li><a href='#inicio' onClick={() => setVista('inicio')}>Inicio</a></li>
+            <li><a href='#login' onClick={() => setVista('login')}>Registro de usuario</a></li>
+            <li><a href='#destinos' onClick={() => setVista('destinos')}>Destinos</a></li>
+            <li><a href='#eventos' onClick={() => setVista('eventos')}>Eventos</a></li>
+          </ul>
+        </nav>
       </section>
 
-      <div className="ticks"></div>
+      <main className='content'>
+        {vista === 'inicio' && (
+          <div>
+            <h2> Bienvenid@ a Raíces conectadas</h2>
+            <p>Descubre los bellos pueblos patrimoniales colombianos</p>
+          </div>
+        )}
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Iniciar sesión</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Conocer destinos</h2>
-          <p>¡Unete a esta grandiosa aventura!</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+        {vista === 'login' && (
+          <div>
+            <h2> ¿Ya tienes una cuenta?</h2>
+            <p>Aquí irá tu formulario de registro.</p>
+          </div>
+        )}
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+        {vista === 'destinos' && (
+          <div>
+            <h2> ¿Ya sabes a dónde será tu próximo destino? </h2>
+            <p>Anímate y conoce estos bellos pueblos</p>
+          </div>
+        )}
+      </main>
     </>
   )
 }

@@ -1,18 +1,23 @@
 import { useState } from 'react'
+import FormularioLogin from './components/clientes/FormularioLogin';
 
 import './App.css'
+import FormularioRegistro from './components/clientes/FormularioRegistro';
 
 function App() {
   const [vista, setVista] = useState('inicio');
 
   return (
     <>
+
+    
       <section id="center">
         <nav className='navbar'>
           <div className='logo'> Raíces conectadas</div>
           <ul className='nav-links'>
             <li><a href='#inicio' onClick={() => setVista('inicio')}>Inicio</a></li>
-            <li><a href='#login' onClick={() => setVista('login')}>Registro de usuario</a></li>
+            <li><a href='#login' onClick={() => setVista('login')}>Inicio de sesión</a></li>
+            <li><a href='#registro' onClick={() => setVista('registro')}>Registro de usuarios</a></li>
             <li><a href='#destinos' onClick={() => setVista('destinos')}>Destinos</a></li>
             <li><a href='#eventos' onClick={() => setVista('eventos')}>Eventos</a></li>
           </ul>
@@ -27,12 +32,9 @@ function App() {
           </div>
         )}
 
-        {vista === 'login' && (
-          <div>
-            <h2> ¿Ya tienes una cuenta?</h2>
-            <p>Aquí irá tu formulario de registro.</p>
-          </div>
-        )}
+        {vista === 'registro' && <FormularioRegistro/> }
+
+        {vista === 'login' && <FormularioLogin/> }
 
         {vista === 'destinos' && (
           <div>

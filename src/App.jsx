@@ -18,6 +18,7 @@ function App() {
             <li><a href='#login' onClick={() => setVista('login')}>Inicio de sesión</a></li>
             <li><a href='#registro' onClick={() => setVista('registro')}>Registro de usuarios</a></li>
             <li><a href='#destinos' onClick={() => setVista('destinos')}>Destinos</a></li>
+            <li><a href='#paquetes' onClick={() => setVista('paquetes')}>Paquetes</a></li>
             <li><a href='#eventos' onClick={() => setVista('eventos')}>Eventos</a></li>
           </ul>
         </nav>
@@ -36,6 +37,12 @@ function App() {
         {vista === 'login' && <FormularioLogin />}
 
         {vista === 'destinos' && <ListaDestino />}
+
+        {vista === 'paquetes' && (  <div>
+            <h2>paquetes</h2>
+            <p>Próximamente...</p>
+          </div>
+        )}
 
         {vista === 'eventos' && (
           <div>

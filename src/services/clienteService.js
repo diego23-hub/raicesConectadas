@@ -1,8 +1,8 @@
-// src/services/clienteService.js
-
+// esta es la capa que habla directamente con el back
 const URL_API = 'http://localhost:3001/clientes';
+// dicha url apunta al json server
 
-// GET - traer todos los clientes
+// GET, trae a todos los clientes
 export const obtenerClientes = async () => {
   const respuesta = await fetch(URL_API);
 
@@ -29,7 +29,7 @@ export const buscarClientePorCorreo = async (correo) => {
   return clientes.length > 0 ? clientes[0] : null;
 };
 
-// POST - registrar un nuevo cliente
+// POST, para registrar un nuevo cliente
 export const crearCliente = async (cliente) => {
   const respuesta = await fetch(URL_API, {
     method: 'POST',
@@ -46,7 +46,7 @@ export const crearCliente = async (cliente) => {
   return await respuesta.json();
 };
 
-// PUT - actualizar un cliente existente
+// PUT, actualiza a un cliente existente por su id
 export const actualizarCliente = async (id, cliente) => {
   const respuesta = await fetch(`${URL_API}/${id}`, {
     method: 'PUT',
@@ -63,7 +63,7 @@ export const actualizarCliente = async (id, cliente) => {
   return await respuesta.json();
 };
 
-// DELETE - eliminar un cliente
+// DELETE, elimina a un cliente por su id
 export const eliminarCliente = async (id) => {
   const respuesta = await fetch(`${URL_API}/${id}`, {
     method: 'DELETE'

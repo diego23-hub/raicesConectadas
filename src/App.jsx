@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import ListaDestino from "./components/destinos/ListaDestinos";
 import FormularioLogin from './components/clientes/FormularioLogin';
+import FormularioRegistro from './components/clientes/FormularioRegistro';
 
 import './App.css';
-import FormularioRegistro from './components/clientes/FormularioRegistro';
+
 
 function App() {
   const [vista, setVista] = useState('inicio');
@@ -50,6 +51,8 @@ function App() {
             <p>Próximamente...</p>
           </div>
         )}
+
+
       </main>
     </>
   );

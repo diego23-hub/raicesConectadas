@@ -1,9 +1,10 @@
+
 import { useEffect, useState} from 'react';
-import CardPaquete from './CardPaquete';
+import CardPaquetes from './CardPaquetes';
 import {obtenerPaquetes} from '../../services/paqueteService'
 
 
-function ListaPaquetes ({alSeleccionarPaquete}){
+function ListaPaquetes (){
     const [paquetes, setPaquetes] = useState([]);
     const [mensaje, setMensaje] = useState("");
 
@@ -18,25 +19,26 @@ const consultarPaquetes = async () => {
     };
     useEffect(() => {
         consultarPaquetes();
+
+
     }, []);
     return (
-      <div className="lista-paquetes">
-        <h2>Paquetes Turisticos</h2>
+    <div className="lista-paquetes">
+      <h2>Paquetes Turisticos</h2>
 
 
-        {mensaje && <p className="mensaje">{mensaje}</p>}
+      {mensaje && <p className="mensaje">{mensaje}</p>}
 
 
-        <div className="grid-paquetes">
-          {paquetes.map((paquetes) => (
-            <CardPaquete
-              key={paquetes.id}
-              paquetes={paquetes}
-              alSeleccionar={alSeleccionarPaquete}
-            />
-          ))}
-        </div>
+      <div className="grid-paquetes">
+        {destinos.map((paquetes) => (
+          <CardPaquetes
+            key={paquetes.id}
+            paquetes={paquetes}
+          />
+        ))}
       </div>
+    </div>
   );
 }
 

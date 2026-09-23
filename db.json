@@ -46,7 +46,56 @@
       "descripcion": "Pueblo de arraigo religioso y cafetero, famoso por la fabricación del carriel antioqueño y el santuario de la Madre Laura."
     }
   ],
-  "paquetes": [],
+  "paquetes": [
+    {
+      "id": 1,
+      "nombre": "Aguadas, Caldas",
+      "precio": 950000,
+      "descripcion": "Cuna del pasillo colombiano y tierra de la cultura cafetera, famosa por la calidez de su gente y la tejeduría artesanal del icónico sombrero aguadeño. Vive una experiencia de 3 días y 2 noches entre fincas cafeteras, talleres interactivos con maestras artesanas y catas de café premium."
+    },
+    {
+      "id": 2,
+      "nombre": "Barichara, Santander",
+      "precio": 1200000,
+      "descripcion": "Considerado el pueblo más lindo de Colombia, destaca por sus calles empedradas, su arquitectura colonial impecable y su ancestral técnica de construcción en tapia pisada. Disfruta de 3 días y 2 noches de desconexión total en hotel boutique, caminata ecológica por el Camino Real a Guane y taller de tallado en piedra."
+    },
+    {
+      "id": 3,
+      "nombre": "Ciénaga, Magdalena",
+      "precio": 1100000,
+      "descripcion": "Capital del realismo mágico, un destino costero impregnado de historia bananera, arquitectura caribeña y leyendas folclóricas que inspiraron a Gabriel García Márquez. Vive 3 días y 2 noches descubriendo la arquitectura bananera y recorriendo en lancha los pueblos palafitos de la Ciénaga Grande."
+    },
+    {
+      "id": 4,
+      "nombre": "Jardín, Antioquia",
+      "precio": 1100000,
+      "descripcion": "Tesoro del suroeste antioqueño que conserva intacta la arquitectura de la colonización paisa, con balcones coloridos y una plaza vibrante. Incluye pasadía de aventura y tradición con transporte desde Medellín, cabalgata, caminata ecológica y visita a la Cueva del Esplendor."
+    },
+    {
+      "id": 5,
+      "nombre": "Guadalajara de Buga, Valle del Cauca",
+      "precio": 490000,
+      "descripcion": "Uno de los centros religiosos más importantes del país, hogar de la Basílica del Señor de los Milagros y un centro histórico colonial muy bien conservado. Disfruta de 2 días y 1 noche con visita guiada a la basílica, museos religiosos y cata de dulces en hacienda azucarera."
+    },
+    {
+      "id": 6,
+      "nombre": "Jericó, Antioquia",
+      "precio": 680000,
+      "descripcion": "Pueblo de paisajes montañosos espectaculares, famoso por ser la cuna de la Madre Laura y por la fabricación artesanal del tradicional carriel antioqueño. Vive un fin de semana con visita guiada al santuario, taller con maestro guarnielero y parapente sobre el cañón del río Cauca."
+    },
+    {
+      "id": 7,
+      "nombre": "Monguí, Boyacá",
+      "precio": 780000,
+      "descripcion": "Famoso por sus calles de piedra y arquitectura franciscana, reconocido mundialmente por la fabricación artesanal de balones cosidos a mano. Disfruta de 3 días y 2 noches con subida al páramo y taller para crear tu propio balón de fútbol."
+    },
+    {
+      "id": 8,
+      "nombre": "Honda, Tolima",
+      "precio": 850000,
+      "descripcion": "Conocida como la ciudad de los puentes, fue el principal puerto fluvial de la colonia y conserva una arquitectura andaluza única a orillas del río Magdalena. Vive 3 días y 2 noches recorriendo puentes históricos, calles coloniales y paseos en canoa con pescadores locales."
+    }
+  ],
   "eventos": [],
   "reservas": [],
   "proveedores": [],

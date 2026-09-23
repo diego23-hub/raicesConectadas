@@ -38,11 +38,7 @@ function App() {
 
         {vista === 'destinos' && <ListaDestino />}
 
-        {vista === 'paquetes' && (  <div>
-            <h2>paquetes</h2>
-            <p>Próximamente...</p>
-          </div>
-        )}
+        {vista === 'paquetes' && <ListaPaquetes />}
 
         {vista === 'eventos' && (
           <div>

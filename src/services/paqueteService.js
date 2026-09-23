@@ -9,3 +9,4 @@ export const obtenerPaquetes = async () => {
         throw new Error ('Error consultando paquetes');
     }
     return await respuesta.json();
+};

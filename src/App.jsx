@@ -1,9 +1,11 @@
 import { useState } from 'react';
-import ListaDestino from "./components/destinos/ListaDestinos";
+import ListaDestino from './components/destinos/ListaDestinos';
+import ListaPaquetes from './components/paquetes/ListaPaquetes';
 import FormularioLogin from './components/clientes/FormularioLogin';
 import FormularioRegistro from './components/clientes/FormularioRegistro';
-
+import ListaReservas from './components/reservas/ListaReservas';
 import './App.css';
+
 
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
             <li><a href='#destinos' onClick={() => setVista('destinos')}>Destinos</a></li>
             <li><a href='#paquetes' onClick={() => setVista('paquetes')}>Paquetes</a></li>
             <li><a href='#eventos' onClick={() => setVista('eventos')}>Eventos</a></li>
+            <li><a href="#reserva"onClick={() => setVista('reserva')}>Reserva</a></li>
           </ul>
         </nav>
       </section>
@@ -47,6 +50,8 @@ function App() {
             <p>Próximamente...</p>
           </div>
         )}
+
+        {vista === 'reserva' && <ListaReservas/>}
 
 
       </main>

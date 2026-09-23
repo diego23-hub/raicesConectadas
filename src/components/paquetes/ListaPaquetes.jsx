@@ -1,6 +1,6 @@
 
 import { useEffect, useState} from 'react';
-import CardPaquetes from './CardPaquetes';
+import CardPaquetes from './CardPaquete';
 import {obtenerPaquetes} from '../../services/paqueteService'
 
 
@@ -31,10 +31,10 @@ const consultarPaquetes = async () => {
 
 
       <div className="grid-paquetes">
-        {destinos.map((paquetes) => (
+        {paquetes.map((paquete) => (
           <CardPaquetes
-            key={paquetes.id}
-            paquetes={paquetes}
+            key={paquete.id}
+            paquete={paquete}
           />
         ))}
       </div>

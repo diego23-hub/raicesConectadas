@@ -1,6 +1,6 @@
 import { useEffect,useState } from "react";
 import { obtenerReservaPorCliente, eliminarReserva } from "../../services/reservaService";
-import {obteenerPaquetes} from '';
+import { obtenerPaquetes } from "../../services/paqueteService";
 
 function ListaReservas ({clienteActivo}) {
     const [reservas, setReservas] = useState ([]);
@@ -10,7 +10,8 @@ function ListaReservas ({clienteActivo}) {
     const cargaDatos = async ()=>{
         try{
             const [datosReservas, datosPaquetes] = await Promise.all ([
-
+                obtenerReservaPorCliente(clienteActivo),
+                obtenerPaquetes()
             ]); 
             setReservas (datosReservas);
             setPaquete (datosPaquetes);

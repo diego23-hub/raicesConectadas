@@ -21,23 +21,22 @@ const paquetesIniciales = [
   { id: 16, nombre: "Santa Cruz de Lorica, Córdoba", precio: 920000, descripcion: "Conocida como la Ciudad Antigua y Señorial, mezcla arquitectura republicana y caribeña con influencia sirio-libanesa. Vive 3 días y 2 noches de turismo gastronómico, aprendizaje de tejido en caña flecha y sabores de cocina árabe-caribeña." },
   { id: 17, nombre: "Pore, Casanare", precio: 1450000, descripcion: "Único Pueblo Patrimonio de los Llanos Orientales, famoso por sus ruinas jesuitas y su importancia histórica en la campaña libertadora. Vive 3 días y 2 noches de aventura extrema con safari llanero y recorridos por paisajes naturales únicos." }
 
-
-
-
 ];
-
+const esperar = (ms)=> new Promise((resolve) => setTimeout(resolve,ms));
 
 async function sembrarPaquetes() {
-  for (const paquetes of paquetesIniciales) {
+  for (const paquete of paquetesIniciales) {
     const respuesta = await fetch(URL_API, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(paquetes)
+      body: JSON.stringify(paquete)
     });
 
 
     const creado = await respuesta.json();
     console.log('Creado:', creado.nombre, '- id:', creado.id);
+
+    await esperar (300);
   }
 
 

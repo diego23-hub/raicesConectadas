@@ -65,7 +65,7 @@ function App() {
           </div>
         )}
 
-        {vista === 'proveedores' && <FormularioProveedor />}
+        {vista === 'proveedores' && <ListaProveedores />}
 
       </main>
     </>

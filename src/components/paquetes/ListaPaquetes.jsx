@@ -3,7 +3,6 @@ import { useEffect, useState} from 'react';
 import CardPaquetes from './CardPaquete';
 import {obtenerPaquetes} from '../../services/paqueteService'
 
-
 function ListaPaquetes (){
     const [paquetes, setPaquetes] = useState([]);
     const [mensaje, setMensaje] = useState("");

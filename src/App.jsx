@@ -3,7 +3,7 @@ import ListaDestino from './components/destinos/ListaDestinos';
 import ListaPaquetes from './components/paquetes/ListaPaquetes';
 import FormularioLogin from './components/clientes/FormularioLogin';
 import FormularioRegistro from './components/clientes/FormularioRegistro';
-import FormularioProveedor from './components/proveedores/FormularioProveedor';
+import ListaProveedores from './components/proveedores/ListaProveedores';
 
 import './App.css';
 

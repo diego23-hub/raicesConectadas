@@ -41,12 +41,26 @@ function App() {
 
         {vista === 'registro' && <FormularioRegistro />}
 
-        {vista === 'login' && <FormularioLogin />}
+        {vista === 'login' && (
+          <FormularioLogin
+            alIniciarSesion={(cliente) => {
+              setClienteActivo(cliente);
+              setVista('inicio');
+            }}
+          />
+        )}
 
         {vista === 'destinos' && <ListaDestino />}
 
-        {vista === 'paquetes' && <ListaPaquetes />}
-
+        {vista === 'paquetes' && (
+          <ListaPaquetes
+            alSeleccionarPaquete={(paquete) => {
+              setPaqueteSeleccionado(paquete);
+              setVista('reservas');
+            }}
+          />
+        )}
+        
         {vista === 'eventos' && (
           <div>
             <h2>Eventos</h2>

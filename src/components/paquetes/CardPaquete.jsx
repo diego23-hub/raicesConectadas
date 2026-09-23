@@ -1,7 +1,9 @@
-function CardPaquetes ({paquetes}){
+function CardPaquetes ({paquetes, alSeleccionar}){
     const precioFormateado = paquetes.precio.toLocaleString('es-CO');
+
     return (
-        <div className="card-paquetes">
+        <div className="card-paquetes" onClick={()=>alSeleccionar && alSeleccionar(paquetes)}>
+        
             <h3>{paquetes.nombre}</h3>
             <span className="tipo-paquetes">{paquetes.tipo}</span>
             <p>{paquetes.descripcion}</p>

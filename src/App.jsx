@@ -2,9 +2,9 @@ import { useState } from 'react';
 import ListaDestino from "./components/destinos/ListaDestinos";
 import FormularioLogin from './components/clientes/FormularioLogin';
 import FormularioRegistro from './components/clientes/FormularioRegistro';
+import FormularioProveedor from './components/proveedores/FormularioProveedor';
 
 import './App.css';
-
 
 function App() {
   const [vista, setVista] = useState('inicio');
@@ -21,6 +21,7 @@ function App() {
             <li><a href='#destinos' onClick={() => setVista('destinos')}>Destinos</a></li>
             <li><a href='#paquetes' onClick={() => setVista('paquetes')}>Paquetes</a></li>
             <li><a href='#eventos' onClick={() => setVista('eventos')}>Eventos</a></li>
+            <li><a href='#proveedores' onClick={() => setVista('proveedores')}>Proveedores</a></li>
           </ul>
         </nav>
       </section>
@@ -48,10 +49,11 @@ function App() {
           </div>
         )}
 
+        {vista === 'proveedores' && <FormularioProveedor />}
 
       </main>
     </>
   );
-
 }
+
 export default App;

@@ -3,6 +3,7 @@ import ListaDestino from "./components/destinos/ListaDestinos";
 import FormularioLogin from './components/clientes/FormularioLogin';
 import FormularioRegistro from './components/clientes/FormularioRegistro';
 import './App.css';
+import ListaPaquetes from './components/paquetes/ListaPaquetes';
 import FormularioReserva from './components/reservas/FormularioReserva';
 //import ListaProveedores from './components/proveedores/ListaProveedores';
 
@@ -14,7 +15,7 @@ function App() {
 
   return (
     <>
-      <section id="center">
+      <section id="busqueda">
         <nav className='navbar'>
           <div className='logo'>Raíces conectadas</div>
           <ul className='nav-links'>

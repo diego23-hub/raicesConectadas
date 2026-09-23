@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <section id="center">
+      <section id="busqueda">
         <nav className='navbar'>
           <div className='logo'>Raíces conectadas</div>
           <ul className='nav-links'>

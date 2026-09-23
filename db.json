@@ -6,6 +6,20 @@
       "correo": "santiago@gmail.com",
       "contrasena": "123",
       "id": "EdzD3atYits"
+    },
+    {
+      "nombres": "Diego",
+      "apellidos": "Noreña",
+      "correo": "norena@diego.com",
+      "contrasena": "juandiego",
+      "id": "r3YH8Dt"
+    },
+    {
+      "nombres": "diego",
+      "apellidos": "noreña",
+      "correo": "diego@mail.com",
+      "contrasena": "diegodiego",
+      "id": "yT1z0qH"
     }
   ],
   "destinos": [
@@ -94,6 +108,60 @@
       "nombre": "Honda, Tolima",
       "precio": 850000,
       "descripcion": "Conocida como la ciudad de los puentes, fue el principal puerto fluvial de la colonia y conserva una arquitectura andaluza única a orillas del río Magdalena. Vive 3 días y 2 noches recorriendo puentes históricos, calles coloniales y paseos en canoa con pescadores locales."
+    },
+    {
+      "id": 9,
+      "nombre": "Playa de Belén, Norte de Santander",
+      "precio": 820000,
+      "descripcion": "Un oasis de paz con fachadas blancas y zócalos rojizos, puerta de entrada al impresionante paisaje del Parque Nacional Natural Los Estoraques. Vive 3 días y 2 noches explorando gigantescas formaciones rocosas y disfrutando de la tranquilidad del pueblo."
+    },
+    {
+      "id": 10,
+      "nombre": "San Juan Girón, Santander",
+      "precio": 550000,
+      "descripcion": "Monumento nacional caracterizado por calles empedradas, paredes blancas y puentes de calicanto que transportan a la época colonial. Ideal para un plan romántico de fin de semana con cena privada, recorrido de mitos y leyendas y ruta del dulce tradicional."
+    },
+    {
+      "id": 11,
+      "nombre": "Santa Cruz de Mompox, Bolívar",
+      "precio": 1650000,
+      "descripcion": "Isla flotante sobre el río Magdalena suspendida en el tiempo, famosa por su música, historia libertaria y la sofisticada técnica artesanal de filigrana en oro y plata. Vive una experiencia exclusiva de 4 días y 3 noches con taller de joyería y atardecer en bote por el río."
+    },
+    {
+      "id": 12,
+      "nombre": "Santa Fe de Antioquia, Antioquia",
+      "precio": 180000,
+      "descripcion": "Antigua capital del departamento y joya arquitectónica colonial de clima cálido, custodiada por el histórico Puente de Occidente. Disfruta de un pasadía premium con recorrido histórico, almuerzo típico y tarde de descanso en hostería con piscina."
+    },
+    {
+      "id": 13,
+      "nombre": "Salamina, Caldas",
+      "precio": 950000,
+      "descripcion": "Conocida como la Ciudad Luz de Caldas, destaca por su arquitectura de colonización y sus espectaculares trabajos de madera tallada. Vive 3 días y 2 noches explorando el pueblo y viajando en Jeep Willys hacia el Valle de la Samaria para admirar las palmas de cera."
+    },
+    {
+      "id": 14,
+      "nombre": "El Socorro, Santander",
+      "precio": 790000,
+      "descripcion": "Cuna de la Revolución de los Comuneros y de la Independencia de Colombia, llena de monumentos históricos e iglesias imponentes. Vive 3 días y 2 noches entre historia, senderismo y catación en haciendas de café orgánico."
+    },
+    {
+      "id": 15,
+      "nombre": "Guaduas, Cundinamarca",
+      "precio": 420000,
+      "descripcion": "Parte fundamental de la Ruta Mutis y lugar de nacimiento de Policarpa Salavarrieta, con casas de teja de barro y cercanía al histórico Camino Real. Ideal para una escapada de fin de semana desde Bogotá con visitas culturales y miradores naturales."
+    },
+    {
+      "id": 16,
+      "nombre": "Santa Cruz de Lorica, Córdoba",
+      "precio": 920000,
+      "descripcion": "Conocida como la Ciudad Antigua y Señorial, mezcla arquitectura republicana y caribeña con influencia sirio-libanesa. Vive 3 días y 2 noches de turismo gastronómico, aprendizaje de tejido en caña flecha y sabores de cocina árabe-caribeña."
+    },
+    {
+      "id": 17,
+      "nombre": "Pore, Casanare",
+      "precio": 1450000,
+      "descripcion": "Único Pueblo Patrimonio de los Llanos Orientales, famoso por sus ruinas jesuitas y su importancia histórica en la campaña libertadora. Vive 3 días y 2 noches de aventura extrema con safari llanero y recorridos por paisajes naturales únicos."
     }
   ],
   "eventos": [],

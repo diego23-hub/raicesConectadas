@@ -1,10 +1,10 @@
-function CardPaquetes ({paquetes}){
-    const precioFormateado = paquetes.precio.toLocaleString('es-CO');
+function CardPaquetes ({paquete}){
+    const precioFormateado = paquete.precio.toLocaleString('es-CO');
     return (
         <div className="card-paquetes">
-            <h3>{paquetes.nombre}</h3>
-            <span className="tipo-paquetes">{paquetes.tipo}</span>
-            <p>{paquetes.descripcion}</p>
+            <h3>{paquete.nombre}</h3>
+            <span className="tipo-paquetes">{paquete.tipo}</span>
+            <p>{paquete.descripcion}</p>
             <span className="precio-paquetes">${precioFormateado}</span>
         </div>
     );

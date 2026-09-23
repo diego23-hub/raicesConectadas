@@ -1,8 +1,6 @@
-
 import { useEffect, useState} from 'react';
-import CardPaquete from './CardPaquete';
+import CardPaquetes from './CardPaquete';
 import {obtenerPaquetes} from '../../services/paqueteService'
-
 
 function ListaPaquetes (){
     const [paquetes, setPaquetes] = useState([]);
@@ -31,10 +29,10 @@ const consultarPaquetes = async () => {
 
 
       <div className="grid-paquetes">
-        {paquetes.map((paquetes) => (
+        {paquetes.map((paquete) => (
           <CardPaquetes
-            key={paquetes.id}
-            paquetes={paquetes}
+            key={paquete.id}
+            paquete={paquete}
           />
         ))}
       </div>

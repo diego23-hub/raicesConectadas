@@ -1,10 +1,12 @@
 import { useState } from 'react';
-import ListaDestino from "./components/destinos/ListaDestinos";
+import ListaDestino from './components/destinos/ListaDestinos';
+import ListaPaquetes from './components/paquetes/ListaPaquetes';
 import FormularioLogin from './components/clientes/FormularioLogin';
 import FormularioRegistro from './components/clientes/FormularioRegistro';
 import FormularioProveedor from './components/proveedores/FormularioProveedor';
 
 import './App.css';
+
 
 function App() {
   const [vista, setVista] = useState('inicio');
@@ -36,12 +38,26 @@ function App() {
 
         {vista === 'registro' && <FormularioRegistro />}
 
-        {vista === 'login' && <FormularioLogin />}
+        {vista === 'login' && (
+          <FormularioLogin
+            alIniciarSesion={(cliente) => {
+              setClienteActivo(cliente);
+              setVista('inicio');
+            }}
+          />
+        )}
 
         {vista === 'destinos' && <ListaDestino />}
 
-        {vista === 'paquetes' && <ListaPaquetes />}
-
+        {vista === 'paquetes' && (
+          <ListaPaquetes
+            alSeleccionarPaquete={(paquete) => {
+              setPaqueteSeleccionado(paquete);
+              setVista('reservas');
+            }}
+          />
+        )}
+        
         {vista === 'eventos' && (
           <div>
             <h2>Eventos</h2>

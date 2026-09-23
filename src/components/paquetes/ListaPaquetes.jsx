@@ -1,10 +1,14 @@
 
 import { useEffect, useState} from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import CardPaquetes from './CardPaquete';
 =======
 import CardPaquete from './CardPaquete';
 >>>>>>> cdbc94e1c6326fb16378708ac07032392b2579df
+=======
+import CardPaquetes from './CardPaquetes';
+>>>>>>> 55a3dcb1994e37360e3a99744881d83332470803
 import {obtenerPaquetes} from '../../services/paqueteService'
 
 
@@ -36,10 +40,14 @@ const consultarPaquetes = async () => {
 
       <div className="grid-paquetes">
 <<<<<<< HEAD
+<<<<<<< HEAD
         {paquetes.map((paquete) => (
 =======
         {paquetes.map((paquetes) => (
 >>>>>>> cdbc94e1c6326fb16378708ac07032392b2579df
+=======
+        {destinos.map((paquetes) => (
+>>>>>>> 55a3dcb1994e37360e3a99744881d83332470803
           <CardPaquetes
             key={paquete.id}
             paquete={paquete}

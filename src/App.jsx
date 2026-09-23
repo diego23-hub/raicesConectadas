@@ -3,17 +3,25 @@ import ListaDestino from './components/destinos/ListaDestinos';
 import ListaPaquetes from './components/paquetes/ListaPaquetes';
 import FormularioLogin from './components/clientes/FormularioLogin';
 import FormularioRegistro from './components/clientes/FormularioRegistro';
+<<<<<<< HEAD
 import ListaReservas from './components/reservas/ListaReservas';
+=======
+>>>>>>> cdbc94e1c6326fb16378708ac07032392b2579df
 import './App.css';
+import ListaPaquetes from './components/paquetes/ListaPaquetes';
+import FormularioReserva from './components/reservas/FormularioReserva';
+//import ListaProveedores from './components/proveedores/ListaProveedores';
 
 
 
 function App() {
   const [vista, setVista] = useState('inicio');
+  const [clienteActivo, setClienteActivo] = useState(null);
+  const [paqueteSeleccionado, setPaqueteSeleccionado] = useState(null);
 
   return (
     <>
-      <section id="center">
+      <section id="busqueda">
         <nav className='navbar'>
           <div className='logo'>Raíces conectadas</div>
           <ul className='nav-links'>
@@ -23,7 +31,12 @@ function App() {
             <li><a href='#destinos' onClick={() => setVista('destinos')}>Destinos</a></li>
             <li><a href='#paquetes' onClick={() => setVista('paquetes')}>Paquetes</a></li>
             <li><a href='#eventos' onClick={() => setVista('eventos')}>Eventos</a></li>
+<<<<<<< HEAD
             <li><a href="#reserva"onClick={() => setVista('reserva')}>Reserva</a></li>
+=======
+            <li><a href='#reservas' onClick={() => setVista('reservas')}>Haz una reserva</a></li>
+            {/*<li><a href='#proveedores' onClick={() => setVista('proveedores')}>Conoce los proveedores</a></li>*/}
+>>>>>>> cdbc94e1c6326fb16378708ac07032392b2579df
           </ul>
         </nav>
       </section>
@@ -50,13 +63,26 @@ function App() {
             <p>Próximamente...</p>
           </div>
         )}
+        {vista === 'reservas' && (clienteActivo && paqueteSeleccionado ? (
+          <FormularioReserva
+            clienteActivo={clienteActivo}
+            paquete={paqueteSeleccionado}
+            alReservar={() => setVista('inicio')}
+            />
+        ):(
+          <p> Debes iniciar sesión y elegir un paquete antes de reservar.</p>
+        )
+        )}
 
+<<<<<<< HEAD
         {vista === 'reserva' && <ListaReservas/>}
 
 
+=======
+        {/*{vista === 'proveedores' && <ListaProveedores />} */}
+>>>>>>> cdbc94e1c6326fb16378708ac07032392b2579df
       </main>
     </>
   );
-
 }
 export default App;

@@ -1,4 +1,3 @@
-
 import { useEffect, useState} from 'react';
 import CardPaquetes from './CardPaquete';
 import {obtenerPaquetes} from '../../services/paqueteService'

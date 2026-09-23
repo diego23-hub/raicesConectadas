@@ -5,7 +5,6 @@ import FormularioLogin from './components/clientes/FormularioLogin';
 import FormularioRegistro from './components/clientes/FormularioRegistro';
 import ListaReservas from './components/reservas/ListaReservas';
 import './App.css';
-import ListaPaquetes from './components/paquetes/ListaPaquetes';
 import FormularioReserva from './components/reservas/FormularioReserva';
 //import ListaProveedores from './components/proveedores/ListaProveedores';
 
@@ -28,7 +27,6 @@ function App() {
             <li><a href='#destinos' onClick={() => setVista('destinos')}>Destinos</a></li>
             <li><a href='#paquetes' onClick={() => setVista('paquetes')}>Paquetes</a></li>
             <li><a href='#eventos' onClick={() => setVista('eventos')}>Eventos</a></li>
-            <li><a href="#reserva"onClick={() => setVista('reserva')}>Reserva</a></li>
             <li><a href='#reservas' onClick={() => setVista('reservas')}>Haz una reserva</a></li>
             {/*<li><a href='#proveedores' onClick={() => setVista('proveedores')}>Conoce los proveedores</a></li>*/}
          </ul>

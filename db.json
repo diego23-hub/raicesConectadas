@@ -6,6 +6,20 @@
       "correo": "santiago@gmail.com",
       "contrasena": "123",
       "id": "EdzD3atYits"
+    },
+    {
+      "nombres": "Diego",
+      "apellidos": "Noreña",
+      "correo": "norena@diego.com",
+      "contrasena": "juandiego",
+      "id": "r3YH8Dt"
+    },
+    {
+      "nombres": "diego",
+      "apellidos": "noreña",
+      "correo": "diego@mail.com",
+      "contrasena": "diegodiego",
+      "id": "yT1z0qH"
     }
   ],
   "destinos": [

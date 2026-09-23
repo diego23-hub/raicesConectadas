@@ -2,12 +2,14 @@ import { useState } from 'react';
 import ListaDestino from "./components/destinos/ListaDestinos";
 import FormularioLogin from './components/clientes/FormularioLogin';
 import FormularioRegistro from './components/clientes/FormularioRegistro';
-import FormularioProveedor from './components/proveedores/FormularioProveedor';
-
 import './App.css';
+import FormularioReserva from './components/reservas/FormularioReserva';
+//import ListaProveedores from './components/proveedores/ListaProveedores';
 
 function App() {
   const [vista, setVista] = useState('inicio');
+  const [clienteActivo, setClienteActivo] = useState(null);
+  const [paqueteSeleccionado, setPaqueteSeleccionado] = useState(null);
 
   return (
     <>
@@ -21,7 +23,8 @@ function App() {
             <li><a href='#destinos' onClick={() => setVista('destinos')}>Destinos</a></li>
             <li><a href='#paquetes' onClick={() => setVista('paquetes')}>Paquetes</a></li>
             <li><a href='#eventos' onClick={() => setVista('eventos')}>Eventos</a></li>
-            <li><a href='#proveedores' onClick={() => setVista('proveedores')}>Proveedores</a></li>
+            <li><a href='#reservas' onClick={() => setVista('reservas')}>Haz una reserva</a></li>
+            {/*<li><a href='#proveedores' onClick={() => setVista('proveedores')}>Conoce los proveedores</a></li>*/}
           </ul>
         </nav>
       </section>
@@ -48,9 +51,18 @@ function App() {
             <p>Próximamente...</p>
           </div>
         )}
+        {vista === 'reservas' && (clienteActivo && paqueteSeleccionado ? (
+          <FormularioReserva
+            clienteActivo={clienteActivo}
+            paquete={paqueteSeleccionado}
+            alReservar={() => setVista('inicio')}
+            />
+        ):(
+          <p> Debes iniciar sesión y elegir un paquete antes de reservar.</p>
+        )
+        )}
 
-        {vista === 'proveedores' && <FormularioProveedor />}
-
+        {/*{vista === 'proveedores' && <ListaProveedores />} */}
       </main>
     </>
   );

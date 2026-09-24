@@ -2,7 +2,7 @@ import { useEffect, useState} from 'react';
 import CardPaquetes from './CardPaquete';
 import {obtenerPaquetes} from '../../services/paqueteService'
 
-function ListaPaquetes (){
+function ListaPaquetes (alReservar){
     const [paquetes, setPaquetes] = useState([]);
     const [mensaje, setMensaje] = useState("");
 
@@ -33,6 +33,7 @@ const consultarPaquetes = async () => {
           <CardPaquetes
             key={paquete.id}
             paquete={paquete}
+            alReservar={alReservar}
           />
         ))}
       </div>

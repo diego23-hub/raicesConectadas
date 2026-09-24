@@ -4,6 +4,7 @@ import ListaPaquetes from './components/paquetes/ListaPaquetes';
 import FormularioLogin from './components/clientes/FormularioLogin';
 import FormularioRegistro from './components/clientes/FormularioRegistro';
 import ListaProveedores from './components/proveedores/ListaProveedores';
+import ListaEventos from './components/eventos/ListaEventos'
 
 import './App.css';
 
@@ -58,12 +59,7 @@ function App() {
           />
         )}
         
-        {vista === 'eventos' && (
-          <div>
-            <h2>Eventos</h2>
-            <p>Próximamente...</p>
-          </div>
-        )}
+        {vista === 'eventos' && <ListaEventos />}
 
         {vista === 'proveedores' && <ListaProveedores />}
 

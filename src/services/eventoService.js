@@ -1,12 +1,12 @@
-const URL_API = 'http://localhost:3001/paquetes';
 
+const URL_API = 'http://localhost:3001/eventos';
 
-export const obtenerPaquetes = async () => {
-    const respuesta = await fetch(URL_API);
+export const obtenerEventos = async () => {
+  const respuesta = await fetch(URL_API);
 
+  if (!respuesta.ok) {
+    throw new Error('Error consultando eventos');
+  }
 
-    if (!respuesta.ok){
-        throw new Error ('Error consultando paquetes');
-    }
-    return await respuesta.json();
+  return await respuesta.json();
 };

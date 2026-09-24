@@ -5,7 +5,7 @@ import FormularioLogin from './components/clientes/FormularioLogin';
 import FormularioRegistro from './components/clientes/FormularioRegistro';
 import FormularioReserva from './components/reservas/FormularioReserva';
 import ListaReservas from './components/reservas/ListaReservas';
-
+import ListaProveedores from './components/proveedores/ListaProveedores';
 import './App.css';
 
 function App() {
@@ -62,6 +62,7 @@ function App() {
 
             <li><a href='#destinos' onClick={() => setVista('destinos')}>Destinos</a></li>
             <li><a href='#paquetes' onClick={() => setVista('paquetes')}>Paquetes</a></li>
+            <li><a href='#proveedores' onClick={() => setVista('proveedores')}>Proveedores</a></li>
           </ul>
         </nav>
       </section>
@@ -95,6 +96,8 @@ function App() {
         {vista === 'reserva' && clienteActivo && (
           <ListaReservas clienteActivo={clienteActivo} />
         )}
+
+        {vista === 'proveedores' && <ListaProveedores />}
       </main>
     </>
   );

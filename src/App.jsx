@@ -4,13 +4,17 @@ import ListaPaquetes from './components/paquetes/ListaPaquetes';
 import FormularioLogin from './components/clientes/FormularioLogin';
 import FormularioRegistro from './components/clientes/FormularioRegistro';
 import ListaProveedores from './components/proveedores/ListaProveedores';
-import ListaEventos from './components/eventos/ListaEventos'
+import ListaEventos from './components/eventos/ListaEventos';
+import FormularioReserva from './components/reservas/FormularioReserva';
 
 import './App.css';
 
 
 function App() {
   const [vista, setVista] = useState('inicio');
+  const [clienteActivo, setClienteActivo] = useState(null);
+  const [paqueteSeleccionado, setPaqueteSeleccionado] = useState(null);
+
 
   return (
     <>
@@ -55,7 +59,7 @@ function App() {
             alSeleccionarPaquete={(paquete) => {
               setPaqueteSeleccionado(paquete);
               setVista('reservas');
-            }}
+            }} 
           />
         )}
         

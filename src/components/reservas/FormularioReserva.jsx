@@ -7,6 +7,7 @@ function FormularioReserva({ clienteActivo, paquete, alReservar }) {
   const [cantidadPersonas, setCantidadPersonas] = useState(1);
   const [mensaje, setMensaje] = useState('');
 
+  const totalEstimado = paquete.precio * cantidadPersonas; 
   const guardarReserva = async (evento) => {
     evento.preventDefault();
 
@@ -29,7 +30,7 @@ function FormularioReserva({ clienteActivo, paquete, alReservar }) {
       setFecha('');
       setCantidadPersonas(1);
 
-      if (alReservar) alReservar(); // avisa al padre para refrescar la lista
+      if (alReservar) alReservar(); 
     } catch (error) {
       console.error(error);
       setMensaje('Error creando la reserva');
@@ -37,8 +38,11 @@ function FormularioReserva({ clienteActivo, paquete, alReservar }) {
   };
 
   return (
-    <form onSubmit={guardarReserva}>
+    <form onSubmit={guardarReserva} className='formulario-reserva'> 
       <h3>Reservar: {paquete.nombre}</h3>
+      <p className='precio-unitario'>
+        precio por persona: ${paquete.precio.toLocaleString('es-CO')}
+      </p>
 
       <label>
         Fecha del viaje
@@ -58,6 +62,10 @@ function FormularioReserva({ clienteActivo, paquete, alReservar }) {
           onChange={(e) => setCantidadPersonas(e.target.value)}
         />
       </label>
+
+      <div className="precotizacion">
+        <strong>Total estimado: ${totalEstimado.toLocaleString('es-CO')}</strong>
+      </div>
 
       <button type="submit">Confirmar reserva</button>
 

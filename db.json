@@ -227,7 +227,16 @@
       "fechaFin": "2026-09-20"
     }
   ],
-  "reservas": [],
+  "reservas": [
+    {
+      "idCliente": "EdzD3atYits",
+      "idPaquete": 1,
+      "fecha": "2026-09-16",
+      "cantidadPersonas": 4,
+      "estado": "confirmada",
+      "id": 1
+    }
+  ],
   "proveedores": [],
   "$schema": "./node_modules/json-server/schema.json"
 }

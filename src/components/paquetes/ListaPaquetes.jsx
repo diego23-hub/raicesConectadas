@@ -2,7 +2,7 @@ import { useEffect, useState} from 'react';
 import CardPaquetes from './CardPaquete';
 import {obtenerPaquetes} from '../../services/paqueteService'
 
-function ListaPaquetes (alReservar){
+function ListaPaquetes ({alReservar}){
     const [paquetes, setPaquetes] = useState([]);
     const [mensaje, setMensaje] = useState("");
 

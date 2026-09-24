@@ -10,7 +10,7 @@ function ListaReservas ({clienteActivo}) {
     const cargaDatos = async ()=>{
         try{
             const [datosReservas, datosPaquetes] = await Promise.all ([
-                obtenerReservaPorCliente(clienteActivo),
+                obtenerReservaPorCliente(clienteActivo.id),
                 obtenerPaquetes()
             ]); 
             setReservas (datosReservas);

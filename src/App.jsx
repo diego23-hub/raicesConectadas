@@ -25,7 +25,6 @@ function App() {
 
   const iniciarReserva = (paquete) => {
     if (!clienteActivo) {
-      setMensajeAviso('Debes iniciar sesión para reservar');
       setVista('login');
       return;
     }
